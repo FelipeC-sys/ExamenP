@@ -14,14 +14,14 @@ public class Main {
         gestor.agregarReserva(d1);
         gestor.agregarReserva(d2);
 
-        Double total = 0;
+        double total = 0;
 
         for (Reserva r : gestor.getReservas()) {
             if (r != null) {
                 System.out.println(r.obtenerDetalles());
                 if (r instanceof Sala3D) {
                     Sala3D s3d = (Sala3D) r;
-                    total += s3d.get.getValorTotal();
+                    total += s3d.getValorTotal();
                 } else {
                     total += r.getCostoBase();
                 }
